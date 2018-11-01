@@ -2,7 +2,7 @@
 #include "OGLRenderer.h"
 
 enum MeshBuffer {
-	VERTEX_BUFFER, COLOUR_BUFFER, MAX_BUFFER,TEXTURE_BUFFER
+	VERTEX_BUFFER, COLOUR_BUFFER, TEXTURE_BUFFER, MAX_BUFFER
 };
 class Mesh
 {
@@ -15,6 +15,9 @@ public:
 
 	void SetTexture(GLuint tex) { texture = tex;  }
 	GLuint GetTexture() { return texture;  }
+
+	static Mesh* GenerateQuad();
+
 protected:
 	void BufferData();
 
